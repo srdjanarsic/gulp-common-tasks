@@ -1,0 +1,48 @@
+{
+    "extends": "eslint:all",
+    "env": {
+        "es6": true,
+        "node": true,
+        "mocha": true
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+        "linebreak-style": "off",
+        "one-var": "off",
+        "sort-keys": "off",
+        "object-shorthand": "off",
+        "capitalized-comments": "off",
+        "func-names": "off",
+        "id-length": "off",
+        "dot-location": ["error", "property"],
+        "prefer-arrow-callback": "off",
+        "quote-props": "off",
+        "prefer-template": "off",
+        "func-style": "off",
+        "no-undefined": "off",
+        "no-magic-numbers": "off",
+        "no-console": "off",
+        "no-process-env": "off",
+        "no-ternary": "off",
+        "multiline-ternary": "off",
+        "array-element-newline": "off",
+        "multiline-comment-style": "off",
+        "padded-blocks": ["error", {
+            "blocks": "never",
+            "classes": "always"
+        }],
+        "no-unused-vars": [
+            "error",
+            {
+                "varsIgnorePattern": "should|expect|runApp|document|console"
+            }
+        ]
+    },
+    "globals": {
+        "document" : true,
+        "console" : true,
+        "process" : true
+    }
+}
