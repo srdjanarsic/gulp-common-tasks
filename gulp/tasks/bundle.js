@@ -13,17 +13,19 @@ module.exports = function (gulp, $, config) {
             entries: "src/app/main.js",
             debug: true
         })
-            .transform(babelify, {presets: ["env"]})
+            .transform(babelify, {
+                presets: ["env"],
+                sourceMaps: true
+            })
             .bundle()
+            // converts readable stream 2 vinyl files stream
             .pipe(source("app.js"))
+            // convert vinyl `content` from stream to buffer
             .pipe(buffer())
             .pipe($.if(config.isDev, $.sourcemaps.init()))
-            .pipe($.babel({presets: ["env"]}))
-            .pipe($.concat(config.jsBuild))
-            .pipe($.rename(config.jsBuild))
             .pipe(uglify())
             .pipe($.if(config.isDev, $.sourcemaps.write(".")))
             .pipe(gulp.dest(config.jsBuildDir))
-            .pipe($.if(config.isDev, $.connect.reload()));
+            .pipe($.connect.reload());
     });
 };
