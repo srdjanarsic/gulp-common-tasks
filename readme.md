@@ -2,6 +2,11 @@
 
 This is a example of using Gulp to automate ES6 based projects.
 
+## Installation
+
+* Clone this repo
+* Inside gulp-common-tasks run `npm install`
+
 ## Principles
 
 This project is based on following principles
