@@ -20,7 +20,8 @@ This project is based on following principles
 
 For development
 
-* `npm start` - makes build and starts watchers (gulp `dev` task)
+* `npm start` - makes build and starts watchers (gulp `dev` task)\
+  Use http://localhost:3232 to access app on localhost.
 * `npm run build:prod` - makes build - production (gulp `build` task)
 * `npm test` - makes build - production (gulp `ui-karma` task)
 
